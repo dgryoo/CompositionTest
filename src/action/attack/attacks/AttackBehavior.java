@@ -1,8 +1,8 @@
-package action.attack;
+package action.attack.attacks;
 
 import thing.Thing;
 
-public abstract class Attack {
+public abstract class AttackBehavior {
 
     public void attack(int power, Thing thing) {
         thing.attacked(power);

@@ -1,9 +1,11 @@
 package action.attack;
 
 
+import thing.Thing;
+
 public interface Attackable {
 
-    void attack();
+    void attackinit(Thing thing);
 
     default boolean isAttack() {
 

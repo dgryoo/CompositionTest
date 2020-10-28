@@ -1,12 +1,13 @@
 package thing;
 
-import action.attack.Attack;
-import action.attack.BowAttack;
-import inter.*;
+import action.attack.Attackable;
+import action.attack.attacks.AshAttack;
+import action.attack.attacks.AttackBehavior;
 
-public class Ash extends Thing implements AttackableTest {
+
+public class Ash extends Thing implements Attackable {
     int power = 10;
-    Attack attack = new BowAttack();
+    AttackBehavior attackBehavior = new AshAttack();
 
     public Ash() {
         super("Ash", 100, 10, 10);
@@ -14,7 +15,12 @@ public class Ash extends Thing implements AttackableTest {
 
 
     @Override
-    public void attack(Thing thing) {
-        attack.attack(this.power, thing);
+    public void attackinit(Thing thing) {
+        attackBehavior.attack(power, thing);
+    }
+
+    @Override
+    public boolean isAttack() {
+        return false;
     }
 }

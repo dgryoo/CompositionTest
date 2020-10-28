@@ -1,36 +1,27 @@
 package thing;
 
-import inter.Attackable;
-import inter.AttackableThing;
-import inter.Movable;
-import inter.MovableThing;
+import action.attack.Attackable;
+import action.attack.attacks.AshAttack;
+import action.attack.attacks.AttackBehavior;
+import action.attack.attacks.DragonAttack;
 
-public class Dragon extends Thing implements Attackable, Movable {
 
-    private AttackableThing attackableThing = new AttackableThing();
-    private MovableThing movableThing = new MovableThing();
+public class Dragon extends Thing implements Attackable {
+    int power = 15;
+    AttackBehavior attackBehavior = new DragonAttack();
 
     public Dragon() {
-        super("Dragon", 100, 10, 10);
+        super("Dragon", 100, 20, 20);
     }
 
 
     @Override
-    public void attack(Thing thing) {
-        attackableThing.dragonAttack(thing);
+    public void attackinit(Thing thing) {
+        attackBehavior.attack(power, thing);
     }
 
     @Override
-    public boolean isAttack(Thing thing) {
-        return true;
-    }
-
-    @Override
-    public void move(Thing thing, int direction) {
-        movableThing.move(this, direction);
-    }
-
-    public void move(int direction) {
-        movableThing.move(this, direction);
+    public boolean isAttack() {
+        return false;
     }
 }
