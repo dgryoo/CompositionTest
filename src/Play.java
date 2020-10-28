@@ -1,15 +1,14 @@
+import thing.Ash;
 import thing.Dragon;
-import thing.Hero;
 
 public class Play {
 
     public static void main(String[] args) {
 
+        Ash ash =new Ash();
         Dragon dragon = new Dragon();
-        Hero hero = new Hero();
 
-        dragon.attack(hero);
-        hero.attack(dragon);
+        ash.attack(dragon);
 
 
     }
