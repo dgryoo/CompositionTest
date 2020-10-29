@@ -3,6 +3,7 @@ package thing;
 import action.attack.Attackable;
 import action.attack.attacks.AshAttack;
 import action.attack.attacks.AttackBehavior;
+import util.BasicAbility;
 
 
 public class Ash extends Thing implements Attackable {
@@ -10,7 +11,7 @@ public class Ash extends Thing implements Attackable {
     AttackBehavior attackBehavior = new AshAttack();
 
     public Ash() {
-        super("Ash", 100, 10, 10);
+        super(BasicAbility.Ash.gettName(), BasicAbility.Ash.getMaxHealth(), BasicAbility.Ash.getArmor(), BasicAbility.Ash.getMagicArmor());
     }
 
 

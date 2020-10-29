@@ -10,12 +10,12 @@ public abstract class Thing {
     private int y;
     private boolean state = true;
 
-    Thing(String tName, int health,int armor, int magicArmor) {
+    Thing(String tName, int maxHealth,int armor, int magicArmor) {
         this.tName = tName;
-        this.health = health;
+        this.health = maxHealth;
         this.armor = armor;
         this.magicArmor = magicArmor;
-        this.maxHealth = health;
+        this.maxHealth = maxHealth;
 
 
     }

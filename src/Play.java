@@ -1,7 +1,5 @@
-import action.attack.Attackable;
 import thing.Ash;
 import thing.Dragon;
-import thing.Thing;
 
 public class Play {
 
@@ -12,8 +10,8 @@ public class Play {
 
         ash.attackinit(dragon);
         dragon.attackinit(ash);
-
-
+        //TODO getClass.simpleName.toString 이용하여 Util만들기
+        System.out.println(ash.getClass().getSimpleName().toString());
 
 
     }
