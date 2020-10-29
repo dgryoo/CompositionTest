@@ -1,7 +1,7 @@
 package util;
 
 public enum ThingValue {
-
+    //TODO 건물, 기본 별 Value를 정의한 Enum클래스 활용
     Ash("Ash", 100, 10, 10),
     Dragon("Dragon", 200, 20, 20);
 
