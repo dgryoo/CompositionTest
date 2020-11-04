@@ -10,6 +10,7 @@ public class Play {
 
         ash.attackinit(dragon);
         dragon.attackinit(ash);
+        ash.move(7);
         //TODO getClass.simpleName.toString 이용하여 Util만들기
         System.out.println(ash.getClass().getSimpleName().toString());
 
